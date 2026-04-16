@@ -1,0 +1,10 @@
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script>
+  const socket = io("http://localhost:5000");
+
+  socket.emit("joinTenant", 1);
+
+  socket.on("leadCreated", (data) => {
+    console.log("New Lead:", data);
+  });
+</script>
